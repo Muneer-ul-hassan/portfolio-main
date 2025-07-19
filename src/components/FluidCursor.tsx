@@ -35,10 +35,11 @@ const ParticleBackground = () => {
           },
           fpsLimit: 120,
           interactivity: {
+            detectOn: "canvas",
             events: {
               onClick: {
                 enable: true,
-                mode: "push",
+                mode: "repulse",
               },
               onHover: {
                 enable: true,
@@ -61,7 +62,7 @@ const ParticleBackground = () => {
                 speed: 3,
               },
               repulse: {
-                distance: 200,
+                distance: 150,
                 duration: 0.4,
               },
               push: {
@@ -84,24 +85,31 @@ const ParticleBackground = () => {
               width: 1,
             },
             move: {
-              direction: "none",
               enable: true,
+              speed: 7,
+              direction: "none",
+              random: true,
+              straight: false,
               outModes: {
                 default: "out",
               },
-              random: true,
-              speed: 7,
-              straight: false,
+              bounce: false,
+              attract: {
+                enable: false,
+                rotateX: 600,
+                rotateY: 1200,
+              },
             },
             number: {
               density: {
                 enable: false,
                 area: 0,
               },
-              value: 67,
+              value: 200,
             },
             opacity: {
               value: 0.5,
+              random: false,
               animation: {
                 enable: false,
                 speed: 1,
@@ -120,7 +128,7 @@ const ParticleBackground = () => {
               },
             },
             size: {
-              value: { min: 0.1, max: 3 },
+              value: 3,
               random: true,
               animation: {
                 enable: false,
