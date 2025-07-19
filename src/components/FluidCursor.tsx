@@ -1,16 +1,12 @@
 
 'use client';
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 import type { Container } from "@tsparticles/engine";
 
 const ParticleBackground = () => {
   const [init, setInit] = useState(false);
-  const [particleCount, setParticleCount] = useState(67);
-  const containerRef = useRef<Container | null>(null);
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     initParticlesEngine(async (engine) => {
@@ -21,41 +17,13 @@ const ParticleBackground = () => {
   }, []);
 
   const particlesLoaded = async (container?: Container) => {
-    if (container) {
-      containerRef.current = container;
-    }
-  };
-
-  const handleClick = () => {
-    // Increase particles on click
-    setParticleCount(prev => prev + 20);
-    
-    // Clear any existing timeout/interval
-    if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    if (intervalRef.current) clearInterval(intervalRef.current);
-    
-    // Start decreasing particles after 1 second
-    timeoutRef.current = setTimeout(() => {
-      intervalRef.current = setInterval(() => {
-        setParticleCount(prev => {
-          if (prev <= 67) {
-            if (intervalRef.current) clearInterval(intervalRef.current);
-            return 67; // Return to default
-          }
-          return prev - 2; // Gradually decrease
-        });
-      }, 100); // Decrease every 100ms
-    }, 1000);
+    console.log(container);
   };
 
   if (!init) return null;
 
   return (
-    <div 
-      className="fixed top-0 left-0 z-0 w-full h-full cursor-pointer" 
-      onClick={handleClick}
-      style={{ backgroundColor: '#f7e6d5' }}
-    >
+    <div className="fixed top-0 left-0 z-0 w-full h-full">
       <Particles
         id="tsparticles"
         particlesLoaded={particlesLoaded}
@@ -130,7 +98,7 @@ const ParticleBackground = () => {
                 enable: false,
                 area: 0,
               },
-              value: particleCount,
+              value: 67,
             },
             opacity: {
               value: 0.5,
