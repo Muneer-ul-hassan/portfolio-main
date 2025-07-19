@@ -1,3 +1,4 @@
+
 'use client';
 import { useEffect, useState, useRef } from 'react';
 import Particles, { initParticlesEngine } from "@tsparticles/react";
@@ -28,11 +29,11 @@ const ParticleBackground = () => {
   const handleClick = () => {
     // Increase particles on click
     setParticleCount(prev => prev + 20);
-
+    
     // Clear any existing timeout/interval
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
     if (intervalRef.current) clearInterval(intervalRef.current);
-
+    
     // Start decreasing particles after 1 second
     timeoutRef.current = setTimeout(() => {
       intervalRef.current = setInterval(() => {
@@ -59,17 +60,21 @@ const ParticleBackground = () => {
         id="tsparticles"
         particlesLoaded={particlesLoaded}
         options={{
+          background: {
+            color: {
+              value: "transparent",
+            },
+          },
           fpsLimit: 120,
           interactivity: {
-            detectOn: 'canvas',
             events: {
               onClick: {
                 enable: true,
-                mode: 'repulse',
+                mode: "push",
               },
               onHover: {
                 enable: true,
-                mode: 'grab',
+                mode: "grab",
               },
               resize: true,
             },
@@ -88,7 +93,7 @@ const ParticleBackground = () => {
                 speed: 3,
               },
               repulse: {
-                distance: 150,
+                distance: 200,
                 duration: 0.4,
               },
               push: {
@@ -101,30 +106,24 @@ const ParticleBackground = () => {
           },
           particles: {
             color: {
-              value: '#000000',
+              value: "#000000",
             },
             links: {
-              color: '#000000',
+              color: "#000000",
               distance: 150,
               enable: true,
               opacity: 0.4,
               width: 1,
             },
             move: {
+              direction: "none",
               enable: true,
-              speed: 7,
-              direction: 'none',
-              random: true,
-              straight: false,
               outModes: {
-                default: 'out',
+                default: "out",
               },
-              bounce: false,
-              attract: {
-                enable: false,
-                rotateX: 600,
-                rotateY: 1200,
-              },
+              random: true,
+              speed: 7,
+              straight: false,
             },
             number: {
               density: {
@@ -135,7 +134,6 @@ const ParticleBackground = () => {
             },
             opacity: {
               value: 0.5,
-              random: false,
               animation: {
                 enable: false,
                 speed: 1,
@@ -144,17 +142,17 @@ const ParticleBackground = () => {
               },
             },
             shape: {
-              type: 'triangle',
+              type: "triangle",
               stroke: {
                 width: 0,
-                color: '#000000',
+                color: "#000000",
               },
               polygon: {
                 sides: 5,
               },
             },
             size: {
-              value: 3,
+              value: { min: 0.1, max: 3 },
               random: true,
               animation: {
                 enable: false,
