@@ -14,3 +14,19 @@ externalPort = 80
 [[ports]]
 localPort = 3001
 externalPort = 3001
+
+[[ports]]
+localPort = 3002
+externalPort = 3002
+
+[workflows]
+runButton = "Start Portfolio"
+
+[[workflows.workflow]]
+name = "Start Portfolio"
+author = 45248426
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npm run dev"
