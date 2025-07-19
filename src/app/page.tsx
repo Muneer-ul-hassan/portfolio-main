@@ -1,6 +1,6 @@
 'use client';
 
-import FluidCursor from '@/components/FluidCursor';
+import ParticleBackground from '@/components/FluidCursor';
 import { Button } from '@/components/ui/button';
 import { GithubButton } from '@/components/ui/github-button';
 import WelcomeModal from '@/components/welcome-modal';
@@ -194,7 +194,7 @@ export default function Home() {
           ))}
         </div>
       </motion.div>
-      <FluidCursor />
+      <ParticleBackground />
     </div>
   );
 }
