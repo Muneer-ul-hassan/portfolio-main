@@ -136,11 +136,18 @@ export default function Home() {
         </h1>
       </motion.div>
 
-      {/* centre memoji */}
-      <div className="relative z-10 h-52 w-48 overflow-hidden sm:h-72 sm:w-72">
-  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.32/build/spline-viewer.js"></script>
-  <spline-viewer url="https://prod.spline.design/Mwlg7aL2ixcIPW-l/scene.splinecode"></spline-viewer>
+     {/* Memoji Image */}
+      <div className="relative z-10 h-52 w-48 overflow-hidden sm:h-72 sm:w-72 flex justify-center items-center">
+  <Image
+    src="/face-head.png"
+    alt="Hero memoji"
+    width={100}
+    height={100}
+    priority
+    className="scale-[2] object-cover"
+  />
 </div>
+
 
       {/* input + quick buttons */}
       <motion.div
