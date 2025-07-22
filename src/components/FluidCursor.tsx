@@ -1,9 +1,8 @@
-
 'use client';
 import { useEffect, useState } from 'react';
-import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { loadSlim } from "@tsparticles/slim";
-import type { Container } from "@tsparticles/engine";
+import Particles, { initParticlesEngine } from '@tsparticles/react';
+import { loadSlim } from '@tsparticles/slim';
+import type { Container } from '@tsparticles/engine';
 
 const ParticleBackground = () => {
   const [init, setInit] = useState(false);
@@ -30,22 +29,24 @@ const ParticleBackground = () => {
         options={{
           background: {
             color: {
-              value: "transparent",
+              value: 'transparent',
             },
           },
           fpsLimit: 120,
           interactivity: {
-            detectOn: "canvas",
+            detectOn: 'canvas',
             events: {
               onClick: {
                 enable: true,
-                mode: "repulse",
+                mode: 'repulse',
               },
               onHover: {
                 enable: true,
-                mode: "grab",
+                mode: 'grab',
               },
-              resize: true,
+              resize: {
+                delay: 0,
+              },
             },
             modes: {
               grab: {
@@ -75,10 +76,10 @@ const ParticleBackground = () => {
           },
           particles: {
             color: {
-              value: "#000000",
+              value: '#000000',
             },
             links: {
-              color: "#000000",
+              color: '#000000',
               distance: 150,
               enable: true,
               opacity: 0.4,
@@ -87,53 +88,49 @@ const ParticleBackground = () => {
             move: {
               enable: true,
               speed: 7,
-              direction: "none",
+              direction: 'none',
               random: true,
               straight: false,
               outModes: {
-                default: "out",
+                default: 'out',
               },
-              bounce: false,
               attract: {
                 enable: false,
-                rotateX: 600,
-                rotateY: 1200,
+                rotate: {
+                  x: 600,
+                  y: 1200,
+                },
               },
             },
             number: {
               density: {
-                enable: false,
-                area: 0,
+                enable: false, // Disable density area (it’s no longer valid)
+                   // Set the number of particles directly
               },
-              value: 150,
+              value: 150,      // This specifies how many particles to show
             },
             opacity: {
               value: 0.5,
-              random: false,
+           
               animation: {
                 enable: false,
                 speed: 1,
-                minimumValue: 0.1,
+              
                 sync: false,
               },
             },
             shape: {
-              type: "triangle",
-              stroke: {
-                width: 0,
-                color: "#000000",
-              },
-              polygon: {
-                sides: 5,
-              },
+              type: 'triangle',
+              
+              
             },
             size: {
               value: 3,
-              random: true,
+        
               animation: {
                 enable: false,
                 speed: 40,
-                minimumValue: 0.1,
+              
                 sync: false,
               },
             },
