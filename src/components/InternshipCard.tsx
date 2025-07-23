@@ -23,7 +23,7 @@ const InternshipCard = () => {
           {/* Avatar placeholder */}
           <div className="bg-muted h-16 w-16 overflow-hidden rounded-full shadow-md">
             <img
-              src="/avatar-raphael.jpg"
+              src="/avatar-muneer.jpg"
               alt="Raphael's avatar"
               className="h-full w-full object-cover"
             />
@@ -66,7 +66,7 @@ const InternshipCard = () => {
           <div>
             <p className="text-foreground text-sm font-medium">Location</p>
             <p className="text-muted-foreground text-sm">
-              Preferably San Francisco 🇺🇸
+              Preferably Germany, but open to remote or other locations
             </p>
           </div>
         </div>
@@ -78,16 +78,17 @@ const InternshipCard = () => {
             <p className="text-foreground text-sm font-medium">Tech stack</p>
             <div className="text-muted-foreground grid grid-cols-1 gap-y-1 text-sm sm:grid-cols-2">
               <ul className="decoration-none list-disc pl-4">
-                <li>Python, Next.js, TypeScript, Tailwind CSS</li>
-                <li>Vercel AI SDK, Supabase, Prisma</li>
-                <li>OpenAI, Mistral, Claude, Whisper</li>
-                <li>Prompt engineering, fine-tuning</li>
+               <li>Python, Next.js, TypeScript, Django</li>
+                <li>HTML, JavaScript, Tailwind CSS, Bootstrap</li>
+              <li>OpenAI, Mistral, Claude, Whisper</li>
+              <li>AI Integration, Prompt engineering, fine-tuning</li>
               </ul>
               <ul className="list-disc pl-4">
-                <li>Weaviate, Pinecone, vector DBs</li>
-                <li>Hugging Face Transformers</li>
-                <li>Tool routing, calling, RAG</li>
-                <li>Hackathons + AI agent workflows</li>
+                <li>LangChain, n8n, Groq</li>
+                <li>Coqui TTS, Hugging Face</li>
+                <li>Real-time AI pipelines, automation</li>
+                <li>Robotics & Controls, LLMs</li>
+                <li>Web development, AI engineering</li>
                 <li>
                   <a
                     href="/chat?query=What%20are%20your%20skills%3F%20Give%20me%20a%20list%20of%20your%20soft%20and%20hard%20skills."
@@ -108,10 +109,8 @@ const InternshipCard = () => {
           What I bring
         </p>
         <p className="text-foreground text-sm">
-          Real-world AI dev experience from Lighton (MCP, secure GPTs, RAG
-          pipelines). <br /> 3x hackathon wins (ETH Oxford, Paris Blockchain
-          Week, Colosseum Breakout on Solana). <br /> I ship fast, and love
-          building useful things that actually work.
+          Real-world AI development experience from VisionSphere (AI integration, secure GPTs, RAG pipelines). <br /> 3x hackathon wins (ETH Oxford, Paris Blockchain Week, Colosseum Breakout on Solana). <br /> I deliver fast, creating practical and scalable solutions that truly make an impact.
+          <br /> I’m a quick learner, a hard worker, and I’m HUNGRYYYYY 🔥
         </p>
       </div>
 
@@ -119,9 +118,7 @@ const InternshipCard = () => {
       <div className="mt-8">
         <p className="text-foreground mb-2 text-lg font-semibold">Goal</p>
         <p className="text-foreground text-sm">
-          Join a bold, innovative team building AI-powered tools that matter. I
-          want to improve fast, contribute hard, and leave a mark. I’m fast,
-          flexible, and HUNGRYYYYY 🔥
+          Join a dynamic, cutting-edge team building AI-driven solutions that make a difference. I’m focused on rapid growth, making impactful contributions, and leaving a legacy. I move quickly, adapt easily, and am driven by ambition to innovate 🔥
         </p>
       </div>
 

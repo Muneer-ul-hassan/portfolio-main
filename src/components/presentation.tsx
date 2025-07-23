@@ -12,10 +12,10 @@ export function Presentation() {
     location: 'Multan, Pakistan',
     // Add a newline character after the emoji
     description:
-      "Hey 👋\nI'm Raph also known as Toukoum. I'm a developer specializing in AI at 42 Paris. I'm working at LightOn AI in Paris. I'm passionate about AI, tech, Entrepreneurship and SaaS tech.",
-    src: '/profil-raph.png',
+    "Hey 👋\nI'm Syed Muneer Ul Hassan, a developer and AI enthusiast based in Pakistan. I specialize in AI, automation, and web technologies. I’m passionate about building intelligent systems, exploring cutting-edge tech, and creating real-world impact through entrepreneurship and SaaS innovation.",
+src: '/profil-muneer.png',
     fallbackSrc:
-      'https://images.unsplash.com/photo-1610216705422-caa3fcb6d158?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3',
+      '/profil-muneer.png'
   };
 
   // Animation variants for text elements

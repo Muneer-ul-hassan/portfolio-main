@@ -6,35 +6,27 @@ import { Photos, PhotoItem } from './photos';
 const Sports = () => {
   const sportPhotos: PhotoItem[] = [
     {
-      src: '/podium.jpg',
-      alt: 'On the podium after a mountain bike race',
-      caption: 'Celebrating a podium finish 3rd at the famous Roc d\'Azur',
-    },
-    {
-      src: '/levens.JPG',
-      alt: 'Racing in Levens',
-      caption: 'Competing in the mountain bike world cup in Levens with some clean conditions ahah',
-    },
-    {
-      src: '/marseille.JPG',
-      alt: 'Racing in Marseille',
-      caption: 'Pushing limits at the Marseille World cup',
-    },
-    {
-      src: '/transmo.JPG',
-      alt: 'Racing in the Transmaurienne',
-      caption: 'On the start line for the Transmaurienne Race in the french Alps',
-    },
-    {
-      src: '/ploeuc.jpg',
-      alt: 'Racing in the World Cup',
-      caption: 'French championship in Ploeuc',
-    },
-    {
-      src: '/gueret.jpg',
-      alt: 'Racing in the World Cup',
-      caption: 'World cup in Gueret',
-    }
+  src: '/hike.JPG',
+  alt: 'Hiking adventure in Naran Valley',
+  caption: 'Went on a hike in Naran and came back via zipline — wild, scenic, and completely unplanned. No photos, just memories!',
+},
+{
+  src: '/Saif-ul-Malook.jpg',
+  alt: 'Lake Saif-ul-Malook in Northern Pakistan',
+  caption: 'Me at Lake Saif-ul-Malook — surrounded by majestic mountains and crystal-clear water. One of the most spontaneous trips I’ve taken!',
+},
+{
+  src: '/img-kalam.jpg',
+  alt: 'Exploring Kalam Valley in Swat',
+  caption: 'A calm afternoon in Kalam Valley — lush forests, cool breeze, and the sound of rivers cutting through the mountains.',
+},
+{
+  src: '/img-kashmir.jpg',
+  alt: 'View from a hillside in Kashmir',
+  caption: 'One of the most peaceful views I’ve witnessed — Kashmir’s hills wrapped in mist and silence. A place that stays with you.',
+  
+},
+
   ];
 
   return (
@@ -44,9 +36,7 @@ const Sports = () => {
           My Sporting Career
         </h2>
         <p className="mt-4 text-muted-foreground">
-          Before focusing on development, I competed at a high level in mountain biking, 
-          reaching Top 15 in the Junior World Cup and Top 10 in French Cup. Here are some highlights from my 
-          athletic journey.
+          Sometimes, I go on hiking adventures to explore nature and disconnect from the digital world. I've explored beautiful places like Swat, Naran, Kashmir, and the stunning Lake Saif-ul-Malook. Here are a few highlights from those peaceful and memorable moments.
         </p>
       </div>
       <Photos photos={sportPhotos} />

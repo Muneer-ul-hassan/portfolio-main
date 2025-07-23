@@ -61,24 +61,21 @@ export default function Home() {
     },
   };
 
-  useEffect(() => {
-    // Précharger les assets du chat en arrière-plan
-    const img = new window.Image();
-    img.src = '/landing-memojis.png';
+ useEffect(() => {
+  // Preload the landing.png image (for both desktop and mobile)
+  const linkImage = document.createElement('link');
+  linkImage.rel = 'preload';
+  linkImage.as = 'image';  // Set the type to 'image' instead of 'video'
+  linkImage.href = '/landing.png';  // Path to your landing image
+  document.head.appendChild(linkImage);
 
-    // Précharger les vidéos aussi
-    const linkWebm = document.createElement('link');
-    linkWebm.rel = 'preload'; // Note: prefetch au lieu de preload
-    linkWebm.as = 'video';
-    linkWebm.href = '/final_memojis.webm';
-    document.head.appendChild(linkWebm);
-
-    const linkMp4 = document.createElement('link');
-    linkMp4.rel = 'prefetch';
-    linkMp4.as = 'video';
-    linkMp4.href = '/final_memojis_ios.mp4';
-    document.head.appendChild(linkMp4);
-  }, []);
+  // Optionally, prefetch the same image for fallback or other purposes
+  const linkImagePrefetch = document.createElement('link');
+  linkImagePrefetch.rel = 'prefetch';
+  linkImagePrefetch.as = 'image';  // Ensure 'image' type for prefetch
+  linkImagePrefetch.href = '/landing.png';  // Path to the same landing image
+  document.head.appendChild(linkImagePrefetch);
+}, []);
 
   return (
     <div className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-4 pb-10 md:pb-20">
@@ -88,7 +85,7 @@ export default function Home() {
           className="hidden bg-gradient-to-b from-neutral-500/10 to-neutral-500/0 bg-clip-text text-[10rem] leading-none font-black text-transparent select-none sm:block lg:text-[16rem]"
           style={{ marginBottom: '-2.5rem' }}
         >
-          Muneer
+          MUNEER
         </div>
       </div>
 
@@ -139,7 +136,7 @@ export default function Home() {
      {/* Memoji Image */}
       <div className="relative z-10 h-52 w-48 overflow-hidden sm:h-72 sm:w-72 flex justify-center items-center">
   <Image
-    src="/face-head.png"
+    src="/landing.png"
     alt="Hero memoji"
     width={100}
     height={100}

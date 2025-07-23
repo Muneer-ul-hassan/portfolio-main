@@ -83,24 +83,19 @@ const Avatar = dynamic<AvatarProps>(
             className="relative cursor-pointer"
             onClick={() => (window.location.href = '/')}
           >
-            {isIOS() ? (
-              <img
-                src="/landing-memojis.png"
-                alt="iOS avatar"
-                className="h-full w-full scale-[1.8] object-contain"
-              />
-            ) : (
-              <video
-                ref={videoRef}
-                className="h-full w-full scale-[1.8] object-contain"
-                muted
-                playsInline
-                loop
-              >
-                <source src="/final_memojis.webm" type="video/webm" />
-                <source src="/final_memojis_ios.mp4" type="video/mp4" />
-              </video>
-            )}
+          {isIOS() ? (
+  <img
+    src="/face-head.png"  // Updated to use the image from the public folder
+    alt="iOS avatar"
+    className="h-full w-full scale-[0.5] object-contain"
+  />
+) : (
+  <img
+    src="/face-head.png"  // Use the same for non-iOS
+    alt="Non-iOS avatar"
+    className="h-full w-full scale-[0.5] object-contain"
+  />
+)}
           </div>
         </div>
       );
