@@ -4,7 +4,9 @@ import Particles, { initParticlesEngine } from '@tsparticles/react';
 import { loadSlim } from '@tsparticles/slim';
 import type { Container } from '@tsparticles/engine';
 
-const ParticleBackground = () => {
+import React from 'react';
+
+const ParticleBackground = React.memo(() => {
   const [init, setInit] = useState(false);
 
   useEffect(() => {
@@ -28,60 +30,30 @@ const ParticleBackground = () => {
         particlesLoaded={particlesLoaded}
         options={{
           background: {
-            color: {
-              value: 'transparent',
-            },
+            color: { value: 'transparent' },
           },
           fpsLimit: 120,
-          interactivity: {
-            detectOn: 'canvas',
-            events: {
-              onClick: {
-                enable: true,
-                mode: 'repulse',
-              },
-              onHover: {
-                enable: true,
-                mode: 'grab',
-              },
-              resize: {
-                delay: 0,
-              },
-            },
-            modes: {
-              grab: {
-                distance: 194.89853095232286,
-                links: {
-                  opacity: 1,
-                },
-              },
-              bubble: {
-                distance: 400,
-                size: 40,
-                duration: 2,
-                opacity: 8,
-                speed: 3,
-              },
-              repulse: {
-                distance: 150,
-                duration: 0.4,
-              },
-              push: {
-                quantity: 4,
-              },
-              remove: {
-                quantity: 2,
-              },
-            },
-          },
           particles: {
-            color: {
-              value: '#000000',
+            number: {
+              value: 200,
+              density: { enable: false },
+            },
+            color: { value: '#000000' },
+            shape: {
+              type: 'triangle',
+            },
+            opacity: {
+              value: 0.5,
+              animation: { enable: false, speed: 1, sync: false },
+            },
+            size: {
+              value: 3,
+              animation: { enable: false, speed: 40, sync: false },
             },
             links: {
-              color: '#000000',
-              distance: 150,
               enable: true,
+              distance: 150,
+              color: '#000000',
               opacity: 0.4,
               width: 1,
             },
@@ -91,48 +63,31 @@ const ParticleBackground = () => {
               direction: 'none',
               random: true,
               straight: false,
-              outModes: {
-                default: 'out',
-              },
-              attract: {
-                enable: false,
-                rotate: {
-                  x: 600,
-                  y: 1200,
-                },
-              },
+              outModes: { default: 'out' },
+              attract: { enable: false, rotate: { x: 600, y: 1200 } },
             },
-            number: {
-              density: {
-                enable: false, // Disable density area (it’s no longer valid)
-                   // Set the number of particles directly
-              },
-              value: 150,      // This specifies how many particles to show
+          },
+          interactivity: {
+            events: {
+              onHover: { enable: true, mode: 'grab' },
+              onClick: { enable: true, mode: 'repulse' },
+              resize: { delay: 0 },
             },
-            opacity: {
-              value: 0.5,
-           
-              animation: {
-                enable: false,
-                speed: 1,
-              
-                sync: false,
+            modes: {
+              grab: {
+                distance: 194.89853095232286,
+                links: { opacity: 1 },
               },
-            },
-            shape: {
-              type: 'triangle',
-              
-              
-            },
-            size: {
-              value: 3,
-        
-              animation: {
-                enable: false,
-                speed: 40,
-              
-                sync: false,
+              bubble: {
+                distance: 400,
+                size: 40,
+                duration: 2,
+                opacity: 8,
+                speed: 3,
               },
+              repulse: { distance: 150, duration: 0.4 },
+              push: { quantity: 4 },
+              remove: { quantity: 2 },
             },
           },
           detectRetina: true,
@@ -140,6 +95,6 @@ const ParticleBackground = () => {
       />
     </div>
   );
-};
+});
 
 export default ParticleBackground;
