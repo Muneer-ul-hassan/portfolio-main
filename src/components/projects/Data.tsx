@@ -60,7 +60,7 @@ const PROJECT_CONTENT = [
   ],
   images: [
     {
-      src: '/VocalGenAI.png', 
+      src: '/VocalGenAi.png', 
       alt: 'VocalGenAI interface',
     },
   ],

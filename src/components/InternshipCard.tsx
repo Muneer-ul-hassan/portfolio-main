@@ -109,7 +109,7 @@ const InternshipCard = () => {
           What I bring
         </p>
         <p className="text-foreground text-sm">
-          Real-world AI development experience from VisionSphere (AI integration, secure GPTs, RAG pipelines). <br /> 3x hackathon wins (ETH Oxford, Paris Blockchain Week, Colosseum Breakout on Solana). <br /> I deliver fast, creating practical and scalable solutions that truly make an impact.
+          Real-world AI development experience from VisionSphere (AI integration, secure GPTs, RAG pipelines). <br /> I deliver fast, creating practical and scalable solutions that truly make an impact.
           <br /> I’m a quick learner, a hard worker, and I’m HUNGRYYYYY 🔥
         </p>
       </div>
