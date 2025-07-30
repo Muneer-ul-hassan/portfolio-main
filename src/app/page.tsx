@@ -13,9 +13,9 @@ import {
   PartyPopper,
   UserRoundSearch,
 } from 'lucide-react';
-import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
+import Spline from '@splinetool/react-spline';
 
 /* ---------- quick-question data ---------- */
 const questions = {
@@ -62,20 +62,11 @@ export default function Home() {
   };
 
  useEffect(() => {
-  // Preload the landing.png image (for both desktop and mobile)
-  const linkImage = document.createElement('link');
-  linkImage.rel = 'preload';
-  linkImage.as = 'image';  // Set the type to 'image' instead of 'video'
-  linkImage.href = '/landing.png';  // Path to your landing image
-  document.head.appendChild(linkImage);
-
-  // Optionally, prefetch the same image for fallback or other purposes
-  const linkImagePrefetch = document.createElement('link');
-  linkImagePrefetch.rel = 'prefetch';
-  linkImagePrefetch.as = 'image';  // Ensure 'image' type for prefetch
-  linkImagePrefetch.href = '/landing.png';  // Path to the same landing image
-  document.head.appendChild(linkImagePrefetch);
-}, []);
+    const linkImage = document.createElement('link');
+    linkImage.rel = 'preload';
+    linkImage.href = 'https://prod.spline.design/BhOIR6gtAB4nYPM1/scene.splinecode';
+    document.head.appendChild(linkImage);
+  }, []);
 
   return (
     <div className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-4 pb-10 md:pb-20">
@@ -133,17 +124,13 @@ export default function Home() {
         </h1>
       </motion.div>
 
-     {/* Memoji Image */}
-      <div className="relative z-10 h-36 w-32 overflow-hidden sm:h-52 sm:w-48 md:h-64 md:w-60 flex justify-center items-center">
-  <Image
-    src="/landing.png"
-    alt="Hero memoji"
-    width={100}
-    height={100}
-    priority
-    className="scale-[1] sm:scale-[1.3] md:scale-[1.6] object-contain"
-  />
-</div>
+     {/* Spline 3D Scene */}
+      <div className="relative z-10 h-36 w-32 sm:h-52 sm:w-48 md:h-64 md:w-60 flex justify-center items-center">
+        <Spline 
+          scene="https://prod.spline.design/BhOIR6gtAB4nYPM1/scene.splinecode"
+          style={{ width: '100%', height: '100%' }}
+        />
+      </div>
 
 
       {/* input + quick buttons */}
