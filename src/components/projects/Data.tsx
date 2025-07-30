@@ -60,7 +60,7 @@ const PROJECT_CONTENT = [
   ],
   images: [
     {
-      src: '/vocalgenai.png', 
+      src: '/VocalGenAI.png', 
       alt: 'VocalGenAI interface',
     },
   ],
@@ -323,9 +323,9 @@ export const data = [
   },
   {
     category: 'Machine Learning Project',
-    title: ' Cat vs Dog Classifier',
+    title: 'Cat vs Dog Classifier',
     src: '/Cat-Dog-preview.png',
-    content: <ProjectContent project={{ title: ' Cat vs Dog Classifier' }} />,
+    content: <ProjectContent project={{ title: 'Cat vs Dog Classifier' }} />,
   },
   {
     category: 'Robotics & Controls',

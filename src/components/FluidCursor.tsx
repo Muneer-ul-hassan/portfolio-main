@@ -1,13 +1,25 @@
 'use client';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import Particles, { initParticlesEngine } from '@tsparticles/react';
 import { loadSlim } from '@tsparticles/slim';
 import type { Container } from '@tsparticles/engine';
-
 import React from 'react';
 
 const ParticleBackground = React.memo(() => {
   const [init, setInit] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Handle window resize
+  const handleResize = useCallback(() => {
+    setIsMobile(window.innerWidth < 768);
+  }, []);
+
+  // Set up resize listener
+  useEffect(() => {
+    handleResize(); // Check initial size
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [handleResize]);
 
   useEffect(() => {
     initParticlesEngine(async (engine) => {
@@ -35,7 +47,7 @@ const ParticleBackground = React.memo(() => {
           fpsLimit: 120,
           particles: {
             number: {
-              value: 200,
+              value: isMobile ? 60 : 130, // Fewer particles on mobile
               density: { enable: false },
             },
             color: { value: '#000000' },
