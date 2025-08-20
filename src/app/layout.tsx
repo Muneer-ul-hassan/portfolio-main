@@ -68,6 +68,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <meta name="google-site-verification" content="j-nNEbWCSpFyKoG0HSb4nezOFVaOAWytKXa1X252viQ" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <link rel="icon" href="/logo-Muneer.svg" sizes="any" />
       </head>

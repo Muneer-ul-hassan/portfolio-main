@@ -150,7 +150,7 @@ const PROJECT_CONTENT = [
  {
   title: 'Mobile Buddy',
   description:
-    'Mobile Buddy is an e-commerce platform where users can buy, sell, repair, and get support for mobile devices.',
+    'Developed an e-commerce platform enabling users to buy, sell, repair, and receive support for mobile devices. The system handles data from product listings and user requests through secure APIs, processes transactions efficiently, and delivers real-time updates with a responsive interface.',
   techStack: ['HTML', 'CSS', 'JavaScript', 'React', 'Node.js', 'Express'],
   date: '2025',
   images: [
@@ -171,7 +171,7 @@ const PROJECT_CONTENT = [
   {
   title: 'Wendy’s Menu',
   description:
-    'Explore the full Wendy’s menu with updated prices, including breakfast options, value meals, burgers, salads, and exclusive deals. Enjoy a variety of mouth-watering options from our signature Baconator to delicious Frosty desserts, available at affordable prices.',
+    'Built a responsive web platform with real-time data flow, covering information gathering, structured processing, and optimized delivery to users. The site ensures seamless integration, fast performance, and secure transactions with a modern tech stack.',
   techStack: ['WordPress', 'PHP', 'HTML', 'CSS', 'JavaScript', 'WooCommerce'],
   date: '2025',
   links: [
