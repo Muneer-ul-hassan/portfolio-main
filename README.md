@@ -1,4 +1,4 @@
-[![AI Portfolio Walkthrough](assets/readme-photo.png)](https://youtu.be/Qf4K51oflHE)
+[![AI Portfolio Walkthrough](https://img.youtube.com/vi/Qf4K51oflHE/maxresdefault.jpg)](https://youtu.be/Qf4K51oflHE)
  
 # World's first AI portfolio 🤖✨  
 
