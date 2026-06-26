@@ -1,10 +1,8 @@
-import { createOpenAI } from '@ai-sdk/openai';
+import { createGoogleGenerativeAI } from '@ai-sdk/google';
 import { streamText } from 'ai';
 
-const gemini = createOpenAI({
-  name: 'gemini',
+const google = createGoogleGenerativeAI({
   apiKey: process.env.GEMINI_API_KEY,
-  baseURL: 'https://generativelanguage.googleapis.com/v1beta/openai/',
 });
 import { SYSTEM_PROMPT } from './prompt';
 import { getContact } from './tools/getContact';
@@ -51,7 +49,7 @@ export async function POST(req: Request) {
     };
 
     const result = streamText({
-      model: gemini('gemini-2.5-flash'),
+      model: google('gemini-2.5-flash'),
       messages,
       tools,
       maxSteps: 2,
