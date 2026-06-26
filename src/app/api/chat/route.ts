@@ -1,5 +1,11 @@
-import { openai } from '@ai-sdk/openai';
+import { createOpenAI } from '@ai-sdk/openai';
 import { streamText } from 'ai';
+
+const groq = createOpenAI({
+  name: 'groq',
+  apiKey: process.env.GROQ_API_KEY,
+  baseURL: 'https://api.groq.com/openai/v1',
+});
 import { SYSTEM_PROMPT } from './prompt';
 import { getContact } from './tools/getContact';
 import { getCrazy } from './tools/getCrazy';
@@ -45,9 +51,8 @@ export async function POST(req: Request) {
     };
 
     const result = streamText({
-      model: openai('gpt-4o-mini'),
+      model: groq('llama-3.3-70b-versatile'),
       messages,
-      toolCallStreaming: true,
       tools,
       maxSteps: 2,
     });

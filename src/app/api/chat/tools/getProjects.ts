@@ -6,7 +6,7 @@ import { z } from "zod";
 export const getProjects = tool({
   description:
     "This tool will show a list of all projects made by Muneer",
-  parameters: z.object({}),
+  parameters: z.object({ info: z.string().optional().describe('Optional info') }),
   execute: async () => {
     return "Here are all the projects made by Muneer (above)! Don't hesitate to ask me more about them! (don't ";
   },
