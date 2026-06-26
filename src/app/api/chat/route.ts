@@ -1,10 +1,10 @@
 import { createOpenAI } from '@ai-sdk/openai';
 import { streamText } from 'ai';
 
-const groq = createOpenAI({
-  name: 'groq',
-  apiKey: process.env.GROQ_API_KEY,
-  baseURL: 'https://api.groq.com/openai/v1',
+const gemini = createOpenAI({
+  name: 'gemini',
+  apiKey: process.env.GEMINI_API_KEY,
+  baseURL: 'https://generativelanguage.googleapis.com/v1beta/openai/',
 });
 import { SYSTEM_PROMPT } from './prompt';
 import { getContact } from './tools/getContact';
@@ -51,7 +51,7 @@ export async function POST(req: Request) {
     };
 
     const result = streamText({
-      model: groq('llama-3.3-70b-versatile'),
+      model: gemini('gemini-2.5-flash'),
       messages,
       tools,
       maxSteps: 2,
