@@ -1,9 +1,9 @@
-![image](assets/readme-photo.png)
+[![AI Portfolio Walkthrough](assets/readme-photo.png)](https://youtu.be/Qf4K51oflHE)
  
 # World's first AI portfolio 🤖✨  
 
 **Static portfolios are dead.**  
-So I built [muneerulhassan.site](https://muneerulhassan.site).
+So I built this fully interactive portfolio.
 
 Instead of making you scroll endlessly, my portfolio adapts to *you*.  
 Ask a question — my AI avatar replies instantly.
@@ -19,8 +19,8 @@ Ask a question — my AI avatar replies instantly.
 This is not a portfolio.  
 It’s a **conversation tailored to your curiosity**.
 
-➡️ **Try it now:** [https://muneerulhassan.site](https://muneerulhassan.site)  
-*What will you ask?*
+➡️ **Watch the full video walkthrough:** [Click here to watch on YouTube](https://youtu.be/Qf4K51oflHE)  
+*See exactly how it works behind the scenes!*
 
 ## 🚀 How to run
 

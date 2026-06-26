@@ -7,7 +7,7 @@ import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
 
 // Load Inter font for non-Apple devices
-const inter = Inter({ 
+const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
 });
@@ -16,12 +16,12 @@ export const metadata: Metadata = {
   title: "Muneer Portfolio",
   description: "Interactive portfolio with an AI-powered Memoji that answers questions about me, my skills, and my experience",
   keywords: [
-    "Muneer", 
-    "Portfolio", 
-    "Developer", 
-    "AI", 
-    "Interactive", 
-    "Memoji", 
+    "Muneer",
+    "Portfolio",
+    "Developer",
+    "AI",
+    "Interactive",
+    "Memoji",
     "Web Development",
     "Full Stack",
     "Next.js",
